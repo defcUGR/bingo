@@ -1,14 +1,16 @@
 {
   "name": "bingo",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Generador de cartones de bingo.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
   "author": "Iván Salido Cobo",
   "license": "MIT",
   "dependencies": {
+    "pdf-lib": "^1.17.1",
     "puppeteer": "^19.2.2"
   }
 }

@@ -8,7 +8,7 @@ html {
     font-size: 20pt;
     border: 0.1mm solid black;
     width: 10cm;
-    height: 4.9745cm;
+    height: 5cm;
 }
 body {
     margin: 0;
@@ -40,14 +40,16 @@ td:empty {
 .footer {
     display: flex;
     font-size: 8pt;
-    margin: 0.333em;
+    margin: 0.35em;
+    margin-bottom: 0;
+    margin-left: 3mm;
+    margin-right: 3mm;
     justify-content: space-between;
+    align-items: center;
 
 }
 img {
-    position: relative;
     max-height: 5mm;
-    top: -0.75mm;
 }
 .link {
     color: #244C5A;
