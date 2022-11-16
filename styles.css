@@ -1,0 +1,54 @@
+table, th, td {
+    border: 0.5mm solid black;
+}
+html {
+    background-color: #FFFFFF;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 20pt;
+    border: 0.1mm solid black;
+    width: 10cm;
+    height: 4.9745cm;
+}
+body {
+    margin: 0;
+}
+.content {
+    margin: auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.title {
+    font-family: 'Font Brush';
+    font-size: 18pt;
+    margin: 0.1em;
+}
+table {
+    margin: auto;
+    border-collapse: collapse;
+    aspect-ratio: 3;
+    width: 9.5cm;
+}
+td {
+    text-align: center;
+    min-width: 9mm;
+}
+td:empty {
+    background-color: #3EB1C8;
+}
+.footer {
+    display: flex;
+    font-size: 8pt;
+    margin: 0.333em;
+    justify-content: space-between;
+
+}
+img {
+    position: relative;
+    max-height: 5mm;
+    top: -0.75mm;
+}
+.link {
+    color: #244C5A;
+}
