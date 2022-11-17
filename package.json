@@ -1,6 +1,6 @@
 {
   "name": "bingo",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "Generador de cartones de bingo.",
   "main": "index.js",
   "type": "module",
@@ -10,6 +10,8 @@
   "author": "Iván Salido Cobo",
   "license": "MIT",
   "dependencies": {
+    "bunyan": "^1.8.15",
+    "lodash": "^4.17.21",
     "pdf-lib": "^1.17.1",
     "puppeteer": "^19.2.2"
   }

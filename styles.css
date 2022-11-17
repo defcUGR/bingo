@@ -29,13 +29,14 @@ table {
     border-collapse: collapse;
     aspect-ratio: 3;
     width: 9.5cm;
+    background-color: #3EB1C8;
 }
 td {
     text-align: center;
     min-width: 9mm;
 }
-td:empty {
-    background-color: #3EB1C8;
+td:not(:empty) {
+    background-color: #FFFFFF;
 }
 .footer {
     display: flex;
