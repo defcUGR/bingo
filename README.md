@@ -2,6 +2,6 @@
 
 Generador de cartones de bingo.
 
-Por ahora, para poder generar un cartón hay que ejecutar un servidor web local en el puerto `5501` con la plantilla de cartón.
+El código abre un servidor en el puerto `5501`, que utiliza para cargar la plantilla y editarla, generando el resto de cartones.
 
-Después, se puede generar el PDF con `npm run start`.
+Se pueden generar los PDFs con `npm run start`.
