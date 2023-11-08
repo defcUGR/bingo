@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer';
-import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import { PDFDocument } from 'pdf-lib';
 import fs from 'fs/promises';
 import lodash from 'lodash';
 import express from 'express';
@@ -16,36 +16,37 @@ const MERGE_CARDS = true; // Si se deben juntar todos los PDFs en uno.
  * @param {string} path - La ruta del PDF.
  */
 async function removeLastPage(path) {
-  let pdfData = await fs.readFile(path);
-  let pdfDoc = await PDFDocument.load(pdfData);
+  const pdfData = await fs.readFile(path);
+  const pdfDoc = await PDFDocument.load(pdfData);
   pdfDoc.removePage(1);
-  pdfData = await pdfDoc.save();
-  await fs.writeFile(path, pdfData);
+  const newPdfData = await pdfDoc.save();
+  await fs.writeFile(path, newPdfData);
 }
 
 /**
  * Genera los índices de las celdas que dejar vacías.
- * @param {int} total - Total de celdas en la fila.
- * @param {int} empty - Número de celdas que deben quedarse vacías.
+ * @param {number} total - Total de celdas en la fila.
+ * @param {number} empty - Número de celdas que deben quedarse vacías.
  * @return {Array} Índices de las celdas que deben quedarse vacías.
  */
 function getEmptyCells(total, empty) {
-  let indexes = [...Array(total).keys()]; // Generamos una lista con los números del 0 a total.
+  const indexes = [...Array(total).keys()]; // Generamos una lista con los números del 0 a total.
   return lodash.shuffle(indexes).slice(0, empty)
 }
 
 const app = express();
-var server = app.listen(PORT);
+const server = app.listen(PORT);
 app.use(express.static('template'));
 
 (async () => {
-  await fs.rm(OUTPUT_DIR, { recursive: true });
-  await fs.mkdir(OUTPUT_DIR);
-  const browser = await puppeteer.launch();
+  await fs.rm(OUTPUT_DIR, { recursive: true }); // Elimina archivos anteriores.
+  await fs.mkdir(OUTPUT_DIR); // Crea el directorio de salida.
+  const browser = await puppeteer.launch({headless: 'new'});
   const page = await browser.newPage();
-  await page.goto('http://localhost:5501');
+  await page.goto('http://localhost:5501', { waitUntil: 'networkidle0' }); // Espera a que las fuentes se hayan cargado correctamente.
   await page.exposeFunction('logInNodeJs', (value) => console.log(value)); // Por si hace falta hacer log dentro del page.evaluate()
-  const bingos = JSON.parse(await fs.readFile('./bingos.json'));
+  const rawBingos = await fs.readFile('./bingos.json');
+  const bingos = JSON.parse(rawBingos.toString());
   for(const [nBingo, bingo] of bingos.entries()) {
     try {
       await fs.mkdir(OUTPUT_DIR + nBingo);
