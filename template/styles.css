@@ -1,57 +1,76 @@
-table, th, td {
-    border: 0.5mm solid black;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+table,
+th,
+td {
+  border: 0.5mm solid black;
 }
 html {
-    background-color: #FFFFFF;
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 20pt;
-    border: 0.1mm solid black;
-    width: 10cm;
-    height: 5cm;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  border: 0.1mm solid black;
+  width: 10cm;
+  height: 5cm;
 }
 body {
-    margin: 0;
+  margin: 0;
+  font-size: 18pt;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  height: 5cm;
 }
 .content {
-    margin: auto;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
+  margin: 0;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
 }
 .title {
-    font-family: 'Font Brush';
-    font-size: 18pt;
-    margin: 0.1em;
+  font-family: 'Font Brush', 'Alex Brush', cursive;
+  font-size: 18pt;
+  margin: 0.1em;
 }
 table {
-    margin: auto;
-    border-collapse: collapse;
-    aspect-ratio: 3;
-    width: 9.5cm;
-    background-color: #3EB1C8;
+  margin: auto;
+  border-collapse: collapse;
+  aspect-ratio: 3;
+  width: 9.5cm;
+  background-color: #3eb1c8;
 }
 td {
-    text-align: center;
-    min-width: 9mm;
+  text-align: center;
+  min-width: 9mm;
 }
 td:not(:empty) {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .footer {
-    display: flex;
-    font-size: 8pt;
-    margin: 0.35em;
-    margin-bottom: 0;
-    margin-left: 3mm;
-    margin-right: 3mm;
-    justify-content: space-between;
-    align-items: center;
-
+  display: flex;
+  font-size: 8pt;
+  margin: 0;
+  margin-left: 3mm;
+  margin-right: 3mm;
+  align-items: center;
+  text-align: center;
+}
+.footer-left {
+  flex-grow: 1;
+}
+.footer-center {
+  margin-left: 3mm;
+  margin-right: 3mm;
+}
+.footer-right {
+  flex-grow: 1;
 }
 img {
-    max-height: 5mm;
+  max-height: 5mm;
 }
 .link {
-    color: #244C5A;
+  color: #244c5a;
 }

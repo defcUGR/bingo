@@ -1,6 +1,6 @@
 {
   "name": "bingo",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Generador de cartones de bingo.",
   "main": "index.js",
   "type": "module",
@@ -13,6 +13,6 @@
     "express": "^4.18.2",
     "lodash": "^4.17.21",
     "pdf-lib": "^1.17.1",
-    "puppeteer": "^19.2.2"
+    "puppeteer": "^21.5.0"
   }
 }
