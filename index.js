@@ -40,7 +40,10 @@ const server = app.listen(PORT);
 app.use(express.static("template"));
 
 (async () => {
-  await fs.rm(OUTPUT_DIR, { recursive: true }); // Elimina archivos anteriores.
+  // Only remove previous files if they exist.
+  try {
+    await fs.rm(OUTPUT_DIR, { recursive: true }); // Elimina archivos anteriores.
+  } catch {}
   await fs.mkdir(OUTPUT_DIR); // Crea el directorio de salida.
   const browser = await puppeteer.launch({ headless: "new" });
   const page = await browser.newPage();
