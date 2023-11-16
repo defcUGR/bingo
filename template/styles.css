@@ -5,14 +5,15 @@ td {
 }
 html {
   background-color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   border: 0.1mm solid black;
   width: 10cm;
   height: 5cm;
 }
 body {
   margin: 0;
-  font-size: 18pt;
+  font-size: 12pt;
+  font-weight: 700;
 }
 .container {
   display: flex;
@@ -28,7 +29,7 @@ body {
   flex-direction: column;
 }
 .title {
-  font-family: 'Font Brush', 'Alex Brush', cursive;
+  font-family: "Font Brush", "Alex Brush", cursive;
   font-size: 18pt;
   margin: 0.1em;
 }
