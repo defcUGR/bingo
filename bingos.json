@@ -282,7 +282,7 @@
       { "key": "p", "value": "Momento lineal", "index": 78 },
       { "key": "≈", "value": "Aproximadamente igual", "index": 79 },
       { "key": "=", "value": "Igual", "index": 80 },
-      { "key": "v", "value": "Velocidad de la luz", "index": 81 },
+      { "key": "v", "value": "Velocidad", "index": 81 },
       { "key": "a", "value": "Aceleración", "index": 82 },
       { "key": "∫", "value": "Integral", "index": 83 },
       { "key": "m", "value": "Molalidad", "index": 84 },
