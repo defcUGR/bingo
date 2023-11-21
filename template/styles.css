@@ -27,18 +27,35 @@ body {
   display: flex;
   text-align: center;
   flex-direction: column;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.1em;
+}
+header img {
+  display: block;
+  min-height: 80%;
+  width: auto;
+  flex-grow: 1;
 }
 .title {
   font-family: "Font Brush", "Alex Brush", cursive;
   font-size: 18pt;
-  margin: 0.1em;
+  margin: 0;
+  margin-left: 3mm;
+  margin-right: 3mm;
 }
 table {
   margin: auto;
   border-collapse: collapse;
   aspect-ratio: 3;
   width: 9.5cm;
-  background-color: #3eb1c8;
+  background-color: #00c389;
 }
 td {
   text-align: center;
@@ -55,20 +72,11 @@ td:not(:empty) {
   margin-right: 3mm;
   align-items: center;
   text-align: center;
-}
-.footer-left {
-  flex-grow: 1;
-}
-.footer-center {
-  margin-left: 3mm;
-  margin-right: 3mm;
-}
-.footer-right {
-  flex-grow: 1;
+  justify-content: center;
 }
 img {
   max-height: 5mm;
 }
 .link {
-  color: #244c5a;
+  color: #2e1a47;
 }

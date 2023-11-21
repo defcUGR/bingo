@@ -10,7 +10,7 @@ const N_COLS = 9; // Número de columnas en el cartón. NO CAMBIAR.
 const N_ROWS = 3; // Número de filas en el cartón. NO CAMBIAR.
 const EMPTY_CELLS = 4; // Número de celdas que deben quedarse vacías por fila. NO CAMBIAR.
 const OUTPUT_DIR = "./output/"; // Carpeta donde generar los PDFs.
-const N_CARDS = 250; // Número de cartones a generar.
+const N_CARDS = 10; // Número de cartones a generar.
 const MERGE_CARDS = true; // Si se deben juntar todos los PDFs en uno.
 
 /**
